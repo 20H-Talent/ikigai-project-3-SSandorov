@@ -5,18 +5,19 @@
   }
 
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     font-family: Roboto,arial, sans-serif;
+   
 }
 
-.page {
-    margin-left: 15px;
-    margin-right: 15px;
+.page-without-title {
+    margin: 0 auto;
+    max-width: 900px;
 }
 
 h1 {
+    display: block;
+    text-align: center;
+    height: auto;
     padding:25px;
     background-color: #2d3945;
     color: white;
@@ -25,8 +26,6 @@ h1 {
     margin-left: 0px;
     margin-right: 0px;
 
-    display: flex;
-    justify-content: center;
 
 }
 
@@ -41,6 +40,8 @@ h2 {
     font-size: 22px;
     font-weight: 400;
     color: #2d3945;
+    margin-right: 15px;
+    margin-left: 15px;
 
     display: flex;
     justify-content: center;
@@ -53,6 +54,8 @@ h2 {
     font-weight: lighter;
     color: #d1d4d6;
     text-align: center;
+    margin-right: 15px;
+    margin-left: 15px;
 
     display: flex;
     justify-content: center;
@@ -62,6 +65,13 @@ h2 {
 hr {
     background-color: #2d3945;
     height:3px;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+main {
+    margin-right: 15px;
+    margin-left: 15px;
 }
 
 .horizontal-header-1 {
@@ -97,6 +107,11 @@ input:focus {
 border-color: #46698b;
 }
 
+input::placeholder {
+    text-align: end;
+    color: #bec2c5;
+}
+
 label {
     margin-bottom: 10px;
     color: #55687a;
@@ -108,12 +123,20 @@ legend {
     color: #55687a;
 }
 
+.form-row-textarea {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
 textarea {
     padding: 20px;
     background-color: #eff0f1;
     border:solid 2px #eff0f1;
     border-radius: 4px;
     height:100px;
+    width: 100%;
+    resize: none;
 }
 
 textarea:focus {
@@ -148,11 +171,16 @@ button {
     border: #4ebbb5;
     border-radius: 4px;
     font-size: 20px;
+    align-items: center;
+    width: 100%;
 }
 
 footer {
     display:flex;
     justify-content: center;
+
+    margin-right: 15px;
+    margin-left: 15px;
 }
 
 .footer-text {
@@ -160,4 +188,45 @@ footer {
     font-style: italic;
     margin-top: 20px;
     margin-bottom: 30px;
+}
+
+@media only screen and (min-width: 768px) {
+
+   
+    .form-row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+    }
+
+    label {
+        width: 150px;
+        margin-bottom: -5px;
+    }
+
+    
+    #full-name {
+        width: 83%;
+    }
+
+    #email-address {
+        width: 83%;
+    }
+
+    #phone-number {
+        width: 83%;
+    }
+
+    #street-address {
+        width: 83%;
+    }
+
+    #city {
+        width: 83%;
+    }
+
+    select {
+        width: 83%;
+    }
 }
